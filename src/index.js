@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './App.js';
+import {FirebaseAppProvider} from 'reactfire'; 
+import {firebase} from './firebaseConfig.js';
 
-ReactDOM.render(
+ReactDOM.render((
+<FirebaseAppProvider FirebaseConfig={firebase}>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <Suspense fallback={'Conectando la app...'}>
+      <App />
+    </Suspense>    
+  </React.StrictMode>
+</FirebaseAppProvider>
+),
+  document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+

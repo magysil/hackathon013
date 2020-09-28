@@ -3,10 +3,12 @@ import {
   BrowserRouter as Router,
   Switch
 } from "react-router-dom";
-import Login from './components/Login';
+import Login from './View/Login';
 import Bienestar from './components/Bienestar';
 import Perfil from './components/Perfil';
 import Planificación from './components/Planificación';
+import Register from './View/Auth';
+import Recovert from './View/Recover';
 
 function App() {
   return (
@@ -22,9 +24,15 @@ function App() {
           <Router path="/perfil">
             <Perfil/>
           </Router>
-          <Router path="/">
+          <Router path="/" exact>
            <Login/>
           </Router>  
+          <Router path="/register">
+           <Register/>
+          </Router>
+          <Router path="/recover">
+           <Recovert/>
+          </Router>
         </Switch>
       </div>
     </Router>
