@@ -12,8 +12,8 @@ import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import 'firebase/auth';
-import { useFirebaseApp } from 'reactfire'; 
+import "firebase/auth";
+import { useFirebaseApp } from "reactfire";
 
 function Copyright() {
   return (
@@ -58,23 +58,32 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    color: "#000",
+    "&:hover": {
+      color: "#000",
+      backgroundColor: "#FFE600",
+    },
+    backgroundColor: "#FFE600",
+  },
+  link: {
+    color: "#000",
   },
 }));
 
 export default function Auth() {
   const classes = useStyles();
-  const [ email, setEmail ] = useState ('');
-  const [ password, setPassword ] = useState ('');
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const firebase = useFirebaseApp();
 
-  const submit = async (e)=>{
-      e.preventDefault();
-      await firebase.auth().createUserWithEmailAndPassword(email, password);
-      alert('Registro Exitoso');
-      document.getElementById("email").value = '';
-      document.getElementById("password").value = '';
-    };
+  const submit = async (e) => {
+    e.preventDefault();
+    await firebase.auth().createUserWithEmailAndPassword(email, password);
+    alert("Registro Exitoso");
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  };
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -90,7 +99,7 @@ export default function Auth() {
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
-              onChange={(ev)=> setEmail(ev.target.value)}
+              onChange={(ev) => setEmail(ev.target.value)}
               variant="outlined"
               margin="normal"
               required
@@ -102,7 +111,7 @@ export default function Auth() {
               autoFocus
             />
             <TextField
-              onChange={(ev)=> setPassword(ev.target.value)}
+              onChange={(ev) => setPassword(ev.target.value)}
               variant="outlined"
               margin="normal"
               required
@@ -125,7 +134,7 @@ export default function Auth() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="/" variant="body2" className={classes.link}>
                   Regresar
                 </Link>
               </Grid>

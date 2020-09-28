@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App.jsx';
+import App from './App.js';
 import {FirebaseAppProvider} from 'reactfire'; 
 import {firebase} from './firebaseConfig.js';
 

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -9,11 +8,10 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import 'firebase/auth';
-import { useFirebaseApp } from 'reactfire'; 
+import "firebase/auth";
+import { useFirebaseApp } from "reactfire";
 
 function Copyright() {
   return (
@@ -58,71 +56,83 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    color: "#000",
+    "&:hover": {
+      color: "#000",
+      backgroundColor: "#FFE600",
+    },
+    backgroundColor: "#FFE600",
+  },
+  check: {
+    color: "#FFE600",
+  },
+  link: {
+    color: "#000",
   },
 }));
 
 export default function Login() {
   const classes = useStyles();
-  const [ email, setEmail ] = useState ('');
-  const [ password, setPassword ] = useState ('');
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const firebase = useFirebaseApp();
 
-  const submit = async (e)=>{
-      e.preventDefault();
-      await firebase.auth().signInWithEmailAndPassword(email, password);
-      alert('Acceso Exitoso');
-      document.getElementById("email").value = '';
-      document.getElementById("password").value = '';
-    };
-    const submitGoogle = async (e)=>{
-      e.preventDefault();
-      const provider = new firebase.auth.GoogleAuthProvider();
-      await firebase.auth().signInWithPopup(provider);
-      alert('Acceso Exitoso');
-      
-    };
-   
+  const submit = async (e) => {
+    e.preventDefault();
+    await firebase.auth().signInWithEmailAndPassword(email, password);
+    alert("Acceso Exitoso");
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+  };
+  const submitGoogle = async (e) => {
+    e.preventDefault();
+    const provider = new firebase.auth.GoogleAuthProvider();
+    await firebase.auth().signInWithPopup(provider);
+    alert("Acceso Exitoso");
+  };
+
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
+          {/*  <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
-          </Avatar>
+          </Avatar> */}
           <Typography component="h1" variant="h5">
-            Inicia sesión
+            Ingresar
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
-              onChange={(ev)=> setEmail(ev.target.value)}
+              onChange={(ev) => setEmail(ev.target.value)}
               variant="outlined"
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Correo"
+              label="Correo Electrónico"
               name="email"
               autoComplete="email"
               autoFocus
             />
             <TextField
-              onChange={(ev)=> setPassword(ev.target.value)}
+              onChange={(ev) => setPassword(ev.target.value)}
               variant="outlined"
               margin="normal"
               required
               fullWidth
               name="password"
-              label="contraseña"
+              label="Contraseña"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" className={classes.check}/>}
               label="Recordar mis datos"
+              
             />
             <Button
               onClick={submit}
@@ -142,16 +152,16 @@ export default function Login() {
               color="primary"
               className={classes.submit}
             >
-              Iniciar sesión con Google
+              Iniciar con Google
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="/recover" variant="body2" className={classes.link}>
                   Olvidé mi contraseña?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/register" variant="body2" className={classes.link}>
                   {"¿No tienes cuenta? Regístrate"}
                 </Link>
               </Grid>
