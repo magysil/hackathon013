@@ -59,11 +59,11 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
     color: "#000",
+    backgroundColor: "#FFE600",
     "&:hover": {
       color: "#000",
       backgroundColor: "#FFE600",
-    },
-    backgroundColor: "#FFE600",
+      },
   },
   link: {
     color: "#000",
