@@ -6,7 +6,7 @@ import {
 import Login from './View/Login';
 import Bienestar from './components/Bienestar';
 import Perfil from './components/Perfil';
-import Planificación from './components/Planificación';
+import Planificación from './View/Planificacion';
 import Register from './View/Auth';
 import Recovert from './View/Recover';
 
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="container">
         <Switch>
-          <Router path="/planificación">
+          <Router path="/planificacion">
            <Planificación/>
           </Router>
           <Router path="/bienestar">
