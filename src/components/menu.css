@@ -1,0 +1,52 @@
+.MenuButton{
+  display: flex;
+  flex-flow: column nowrap; 
+  margin-top: 40px;
+}
+  a {
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: rgb(88, 85, 85);
+  }
+    
+  a:hover{
+    color: black;
+  }
+
+  .MenuButtonChild1{
+    display: flex;
+    text-align: center;
+    flex: 1 1 auto; 
+  }
+
+  .MenuButtonChild1:Hover{
+    background: #FFE600;
+    transition: 0.2s;
+  }
+
+  .MenuButtonChild2{
+    display: flex;
+    text-align: center;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .MenuButtonChild2:Hover{
+    background: #FFE600;
+    transition: 0.2s;
+  }
+
+  .MenuButtonChild3{
+    display: flex;
+    text-align: center;
+    flex: 1 1 auto;
+  }
+
+  .MenuButtonChild3:Hover{
+    background: #FFE600;
+    transition: 0.2s;
+  }
+
