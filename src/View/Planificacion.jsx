@@ -36,6 +36,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import Avatar from "../components/avatar";
 
+import MenuLateral from '../components/menu'
 
 
 
@@ -103,16 +104,16 @@ import Avatar from "../components/avatar";
   },
 }));
  
- export default function ClippedDrawer() {
+export default function ClippedDrawer() {
    const classes = useStyles();
  
-   return (
-     <div className={classes.root}>
+  return (
+    <div className={classes.root}>
        <CssBaseline />
        <AppBar position="fixed" className={classes.appBar} style={{ background: '#FFFFFF' }}>
        <Toolbar>
  
- <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '20px' }}/>
+    <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '20px' }}/>
  
    <div className={classes.grow} />
    <div className={classes.sectionDesktop}>
@@ -138,7 +139,7 @@ import Avatar from "../components/avatar";
        <MoreIcon />
      </IconButton>
    </div> */}
- </Toolbar>
+    </Toolbar>
        </AppBar>
        <Drawer
          className={classes.drawer}
@@ -149,16 +150,9 @@ import Avatar from "../components/avatar";
        >
          <Toolbar />
          
-         <div className={classes.drawerContainer}>
-           <List style={{ overflow: 'hidden'}}>
-             {['', '', ''].map((text, index) => (
-               <ListItem button key={text}>
-                 <ListItemIcon>{index % 2 === 0 ? <PersonIcon /> : <FavoriteIcon />}</ListItemIcon>
-                 <ListItemText primary={text} />
-               </ListItem>
-             ))}
-           </List>
-         </div>
+        <div className={classes.drawerContainer}>
+          <MenuLateral/>
+        </div>
        </Drawer>
 
          <Toolbar />
@@ -173,5 +167,8 @@ import Avatar from "../components/avatar";
        <MiniSidebar />
        
      </div>
-   );
- }
+  );
+}
+
+
+
