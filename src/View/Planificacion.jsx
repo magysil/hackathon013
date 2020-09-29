@@ -133,7 +133,7 @@ export default function ClippedDrawer() {
    <div className={classes.sectionDesktop}>
      <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
       <Avatar></Avatar> 
-       <Badge color="primary" variant="dot">
+           <Badge color="primary" variant="dot">
        
          <NotificationsIcon />
        </Badge>
