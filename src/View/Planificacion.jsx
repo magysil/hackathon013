@@ -1,4 +1,7 @@
 import React from 'react';
+import { useUser } from "reactfire";
+import { useHistory} from 'react-router-dom';
+import Login from './Login';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -111,8 +114,14 @@ import Link from '@material-ui/core/Link';
  
 export default function ClippedDrawer() {
    const classes = useStyles();
+   const user = useUser();
+   const history = useHistory();
  
   return (
+    
+    <div>
+      {
+      user &&
     <div className={classes.root}>
        <CssBaseline />
        <AppBar position="fixed" className={classes.appBar} style={{ background: '#FFFFFF' }}>
@@ -123,7 +132,7 @@ export default function ClippedDrawer() {
    <div className={classes.grow} />
    <div className={classes.sectionDesktop}>
      <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
-     <Avatar></Avatar>
+      <Avatar></Avatar> 
        <Badge color="primary" variant="dot">
        
          <NotificationsIcon />
@@ -191,6 +200,14 @@ export default function ClippedDrawer() {
       </main>
        <MiniSidebar />
        
+     </div>
+      }
+      {
+        !user &&
+        
+        <Login />
+                 
+      }
      </div>
   );
 }

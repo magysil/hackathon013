@@ -11,7 +11,11 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "firebase/auth";
-import { useFirebaseApp } from "reactfire";
+import { useFirebaseApp, useUser } from "reactfire";
+import { useHistory} from 'react-router-dom'
+import Planificacion from './Planificacion'
+import logo from '../imagenes/logo.png'
+
 
 function Copyright() {
   return (
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   image: {
-    backgroundImage: "url(https://i.ibb.co/bv5wTTr/imagenEY.png)",
+    backgroundImage: "url(https://i.ibb.co/HKgSR3b/imagenEY.png)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -69,33 +73,59 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: "#000",
   },
+  h1: {
+    color: "#FFE600",
+  },
+  p: {
+    color: "#FFF",
+  },
+  logo: {
+    width: "112px",
+  },
 }));
 
 export default function Login() {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
+  const user = useUser();
 
   const firebase = useFirebaseApp();
 
   const submit = async (e) => {
     e.preventDefault();
-    await firebase.auth().signInWithEmailAndPassword(email, password);
-    alert("Acceso Exitoso");
-    document.getElementById("email").value = "";
-    document.getElementById("password").value = "";
+    await firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+      alert("Acceso Exitoso");
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      history.push('/planificacion');
+    })
+    .catch((error) => {
+      alert('Correo o Contraseña Invalida');
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    }); 
+    
+
   };
   const submitGoogle = async (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     await firebase.auth().signInWithPopup(provider);
-    alert("Acceso Exitoso");
+     history.push('/planificacion');
+        
   };
 
   return (
+    <div>   
+    {
+    !user &&
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <Grid item xs={false} sm={4} md={7} className={classes.image}> 
+      </Grid>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           {/*  <Avatar className={classes.avatar}>
@@ -173,5 +203,11 @@ export default function Login() {
         </div>
       </Grid>
     </Grid>
+    }
+    {
+      user && <Planificacion />
+    }
+   </div>
+    
   );
 }
