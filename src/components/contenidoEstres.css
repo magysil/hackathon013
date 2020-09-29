@@ -1,0 +1,16 @@
+.ContenidoEstres{
+    padding: 10px;
+}
+
+.ContenidoEstresChild{
+    padding: 10px;
+}
+
+.ContenidoEstresChild:hover{
+    background-color: #F6F6FA;
+    border-radius: 10px;
+}
+
+.imgContenidoEstres{
+    text-align: center;
+}
