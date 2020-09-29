@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: 'left',
     color: theme.palette.text.secondary,
   },
 }));
@@ -22,14 +22,40 @@ export default function AutoGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs>
-          <Paper className={classes.paper}>To Do/Por hacer</Paper>
-          
+          <Paper className={classes.paper}>
+            <Typography
+            style={{fontSize: '1.150rem',
+            color:'#000000',
+            fontWeight:'500'}}>To Do/Por hacer</Typography>
+          <Typography component='h6'
+         style={{fontSize: '0.9rem',
+         color:'#FFE600',
+         fontWeight:'bold'}}>+ Agregar tareas</Typography>
+          </Paper>
         </Grid>
         <Grid item xs>
-          <Paper className={classes.paper}>To Do/Por hacer</Paper>
+        <Paper className={classes.paper}>
+        <Typography
+            style={{fontSize: '1.150rem',
+            color:'#000000',
+            fontWeight:'500'}}>To Do/Por hacer</Typography>
+          <Typography component='h6'
+         style={{fontSize: '0.9rem',
+         color:'#FFE600',
+         fontWeight:'bold'}}>+ Agregar tareas</Typography>
+          </Paper>
         </Grid>
         <Grid item xs>
-          <Paper className={classes.paper}>To Do/Por hacer</Paper>
+        <Paper className={classes.paper}>
+        <Typography
+            style={{fontSize: '1.150rem',
+            color:'#000000',
+            fontWeight:'500'}}>To Do/Por hacer</Typography>
+          <Typography component='h6'
+         style={{fontSize: '0.9rem',
+         color:'#FFE600',
+         fontWeight:'bold'}}>+ Agregar tareas</Typography>
+          </Paper>
         </Grid>
       
       </Grid>

@@ -1,29 +1,15 @@
 import React from "react";
-import { Grid, makeStyles, Box, withWidth } from "@material-ui/core/";
+import { Grid, makeStyles, withWidth } from "@material-ui/core/";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
+import IconButton from '@material-ui/core/IconButton';
 import Button from "@material-ui/core/Button";
 
 import Avatar from "./avatar";
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+import CheckIcon from '@material-ui/icons/CheckBoxOutlined'
 
 const estilos = makeStyles((theme) => ({
   fondo: {
@@ -36,103 +22,316 @@ const Columnas = (props) => {
 
   return (
     <div>
-      <Grid container spacing={2}>
-        <Grid item xs={10} md={4} lg={3} className={classes.fondo}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={4}>
           <Card className={classes.root}>
             <CardContent>
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
+              </Typography>
               <CardActions>
                 <Button
                   variant="contained"
-                  color="'#002884'"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
                   href="#contained-buttons"
+                  disabled="true"
                 >
-                  IOS
+                  iOS
                 </Button>
               </CardActions>
-              <Typography className={classes.pos} color="textSecondary">
-                Configuring azure active
-              </Typography>
-              <Typography variant="body2" component="p">
-                Directory documentation
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
                 <br />
               </Typography>
-              <Avatar></Avatar>
-            </CardContent>
-          </Card>
-        </Grid>
 
-        <Grid item xs={10} md={4} lg={3} className={classes.fondo}>
-          <Card className={classes.root}>
-            <CardContent>
-            <CardActions>
-            <Button
-                  variant="contained"
-                  color="'#002884'"
-                  href="#contained-buttons"
-                >
-                  IOS
-                </Button>
-            </CardActions>
-            <Typography className={classes.pos} color="textSecondary">
-                Configuring azure active
-              </Typography>
-              <Typography variant="body2" component="p">
-                Directory documentation
-                <br />
-              </Typography>
-              <Avatar></Avatar>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
             </CardContent>
           </Card>
         </Grid>
-        
-        <Grid item xs={10} md={4} lg={3} className={classes.fondo}>
+        <Grid item xs={12} sm={4}>
           <Card className={classes.root}>
             <CardContent>
-            <CardActions>
-            <Button
-                  variant="contained"
-                  color="'#002884'"
-                  href="#contained-buttons"
-                >
-                  IOS
-                </Button>
-            </CardActions>
-            <Typography className={classes.pos} color="textSecondary">
-                Configuring azure active
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
               </Typography>
-              <Typography variant="body2" component="p">
-                Directory documentation
+              <CardActions>
+                <Button
+                  variant="contained"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                  href="#contained-buttons"
+                  disabled="true"
+                >
+                  iOS
+                </Button>
+              </CardActions>
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
                 <br />
               </Typography>
-              <Avatar></Avatar>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
+              </Typography>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                  href="#contained-buttons"
+                  disabled="true"
+                >
+                  iOS
+                </Button>
+              </CardActions>
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
+                <br />
+              </Typography>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
+              </Typography>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                  href="#contained-buttons"
+                  disabled="true"
+                >
+                  iOS
+                </Button>
+              </CardActions>
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
+                <br />
+              </Typography>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
+              </Typography>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                  href="#contained-buttons"
+                  disabled="true"
+                >
+                  iOS
+                </Button>
+              </CardActions>
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
+                <br />
+              </Typography>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography
+                style={{
+                  textAlign: "right",
+                  fontSize: "1.6rem",
+                  color: "#747480",
+                  fontWeight: "bold",
+                }}
+              >
+                ...
+              </Typography>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  style={{
+                    background: "#000000",
+                    color: "#FFFFFF",
+                    textTransform: "none",
+                    fontFamily: "Arial, sans-serif",
+                  }}
+                  href="#contained-buttons"
+                  disabled="true"
+                >
+                  iOS
+                </Button>
+              </CardActions>
+              <Typography
+                className={classes.pos}
+                color="textSecondary"
+                style={{ fontSize: "1rem", color: "#4e4e4e" }}
+              >
+                Configuring Azure Active Directory Documentation
+                <br />
+              </Typography>
+              <IconButton style={{ color: "#747480" }}>
+                <CheckIcon />{" "}
+                <Typography style={{ fontSize: "0.9rem" }}>4/5</Typography>
+              </IconButton>
+              <Grid
+                container
+                alignItems="flex-start"
+                justify="flex-end"
+                direction="row"
+              >
+                <Avatar></Avatar>
+              </Grid>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-      <Grid item xs={10} md={4} lg={3} className={classes.fondo}>
-        
-        <Card className={classes.root}>
-          <CardContent>
-          <CardActions>
-            <Button
-                  variant="contained"
-                  color="'#002884'"
-                  href="#contained-buttons"
-                >
-                  IOS
-                </Button>
-            </CardActions>
-            <Typography className={classes.pos} color="textSecondary">
-                Configuring azure active
-              </Typography>
-              <Typography variant="body2" component="p">
-                Directory documentation
-                <br />
-              </Typography>
-              <Avatar></Avatar>
-          </CardContent>
-        </Card>
-      </Grid>  
     </div>
   );
 };
