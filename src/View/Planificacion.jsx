@@ -131,7 +131,7 @@ export default function ClippedDrawer() {
    {user.displayName}</Typography></div>
    <div className={classes.sectionDesktop}>
 
-     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}} style={{ padding: '10px 0 10px 0', marginLeft: '770px' }}>
+     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}} style={{ padding: '10px 0 10px 0', marginLeft: '600px' }}>
      
       <img src={On} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
      </IconButton>
