@@ -13,7 +13,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import "firebase/auth";
 import { useFirebaseApp, useUser } from "reactfire";
 import { useHistory} from 'react-router-dom'
-import Perfil from '../components/Perfil'
+import Planificacion from './Planificacion'
+import logo from '../imagenes/logo.png'
 
 
 function Copyright() {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   image: {
-    backgroundImage: "url(https://i.ibb.co/bv5wTTr/imagenEY.png)",
+    backgroundImage: "url(https://i.ibb.co/HKgSR3b/imagenEY.png)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -72,6 +73,15 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: "#000",
   },
+  h1: {
+    color: "#FFE600",
+  },
+  p: {
+    color: "#FFF",
+  },
+  logo: {
+    width: "112px",
+  },
 }));
 
 export default function Login() {
@@ -90,7 +100,7 @@ export default function Login() {
       alert("Acceso Exitoso");
       document.getElementById("email").value = "";
       document.getElementById("password").value = "";
-      history.push('/Perfil');
+      history.push('/planificacion');
     })
     .catch((error) => {
       alert('Correo o Contraseña Invalida');
@@ -104,7 +114,7 @@ export default function Login() {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     await firebase.auth().signInWithPopup(provider);
-     history.push('/Perfil');
+     history.push('/planificacion');
         
   };
 
@@ -114,7 +124,8 @@ export default function Login() {
     !user &&
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <Grid item xs={false} sm={4} md={7} className={classes.image}> 
+      </Grid>
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           {/*  <Avatar className={classes.avatar}>
@@ -194,7 +205,7 @@ export default function Login() {
     </Grid>
     }
     {
-      user && <Perfil />
+      user && <Planificacion />
     }
    </div>
     

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import { useUser } from "reactfire";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,10 +14,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ImageAvatars() {
   const classes = useStyles();
+  const user = useUser();
 
   return (
     <div className={classes.root}>
-      <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      <Avatar alt="Remy Sharp" src= {user.photoURL} />
 
     </div>
   );
