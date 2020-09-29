@@ -1,8 +1,9 @@
 import React from 'react'
 import './menu.css'
-import Bienestar from '../imagenes/Bienestar.png'
-import Perfil from '../imagenes/Perfil.png'
-import Tareas from '../imagenes/Tareas.png'
+import Bienestar from '../imagenes/Bienestar.svg'
+import Perfil from '../imagenes/Perfil.svg'
+import Tareas from '../imagenes/Tareas.svg'
+import Metricas from '../imagenes/Metricas.svg'
 
 
 const MenuLateral = () => {
@@ -18,6 +19,9 @@ const MenuLateral = () => {
       </div>
       <div className="MenuButtonChild3">
         <a href="/perfil"><img alt="" src={Perfil} /><br/>Colaborador</a>
+      </div>
+      <div className="MenuButtonChild4">
+        <a href="/perfil"><img alt="" src={Metricas} /><br/>Metricas </a>
       </div>
     </aside>
     

@@ -12,7 +12,9 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import SettingsIcon from '@material-ui/icons/SettingsOutlined'
 import EYlogo from '../imagenes/eylogo.svg'
  //____________________//
-
+ import On from '../imagenes/On.svg'
+ import GON from '../imagenes/GON.svg'
+ import Logout from '../imagenes/Logout.svg'
  import MiniSidebar from '../components/minisidebar'
 
  import Cards from '../components/cards'
@@ -122,18 +124,22 @@ export default function ClippedDrawer() {
        <Toolbar>
  
     <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '20px' }}/>
- 
+    <Avatar></Avatar>
+
    <div className={classes.grow} />
+   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'10px'}}>
+   {user.displayName}</Typography></div>
    <div className={classes.sectionDesktop}>
-     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
-      <Avatar></Avatar> 
-       <Badge color="primary" variant="dot">
-       
-         <NotificationsIcon />
-       </Badge>
+
+     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}} style={{ padding: '10px 0 10px 0', marginLeft: '770px' }}>
+     
+      <img src={On} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
      </IconButton>
      <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
-         <SettingsIcon />
+     <img src={GON} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
+     </IconButton>
+     <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
+     <img src={Logout} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
      </IconButton>
    </div>
    {/* <div className={classes.sectionMobile}>
