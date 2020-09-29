@@ -20,6 +20,7 @@ import EYlogo from '../imagenes/eylogo.svg'
 
  import Cards from '../components/cards'
 import Grid from '../components/grid'
+import Paper from '@material-ui/core/Paper';
 import Tab from '../components/disabletab'
 
 import Drawer from '@material-ui/core/Drawer';
@@ -37,7 +38,11 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import Avatar from "../components/avatar";
 
 import MenuLateral from '../components/menu'
+import Contenido from '../components/contenidodash'
 
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 
 
  const drawerWidth = 50;
@@ -158,17 +163,38 @@ export default function ClippedDrawer() {
          <Toolbar />
          <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Tab></Tab>
-        <Typography>Proyecto BIC</Typography>
-        Implementación App Banco Intercontinental
-        <Grid></Grid>
-        <Cards />
+        {/* <Box component="span" m={1}>
+  <Button style={{ textTransform: "none", color: "#808080" }}>
+    Todos los proyectos
+  </Button>
+  <Button style={{ textTransform: "none" }}>
+    <Link
+      underline="always"
+      style={{
+        textDecoration: "none",
+        color: "#131313",
+        borderBottom: "2px solid #FFE600",
+      }}
+    >
+      Proyecto principal
+    </Link>
+  </Button>
+  <Button style={{ textTransform: "none", color: "#808080" }}>
+    Configurar proyectos
+  </Button>
+</Box> */}
+        {/* <Tab></Tab> */}
+        
+        <Contenido />
+        {/* <Grid></Grid>
+        <Cards /> */}
       </main>
        <MiniSidebar />
        
      </div>
   );
 }
+
 
 
 
