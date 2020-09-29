@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFirebaseApp, useUser } from "reactfire";
+import { useUser } from "reactfire";
 import { useHistory} from 'react-router-dom';
 import Login from './Login';
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -110,12 +110,6 @@ export default function ClippedDrawer() {
    const classes = useStyles();
    const user = useUser();
    const history = useHistory();
-   const firebase = useFirebaseApp();
-
-   const logout = async ()=>{
-     await firebase.auth().signOut();
-     history.push('/');
-   }
  
   return (
     
@@ -141,8 +135,6 @@ export default function ClippedDrawer() {
      <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
          <SettingsIcon />
      </IconButton>
-     <button onClick={logout}> Cerrar Sesión</button>
-
    </div>
    {/* <div className={classes.sectionMobile}>
      <IconButton

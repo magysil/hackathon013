@@ -38,7 +38,7 @@ export default function AutoGrid() {
         <Typography
             style={{fontSize: '1.150rem',
             color:'#000000',
-            fontWeight:'500'}}>To Do/Por hacer</Typography>
+            fontWeight:'500'}}>Doing/Haciendo</Typography>
           <Typography component='h6'
          style={{fontSize: '0.9rem',
          color:'#FFE600',
@@ -50,7 +50,7 @@ export default function AutoGrid() {
         <Typography
             style={{fontSize: '1.150rem',
             color:'#000000',
-            fontWeight:'500'}}>To Do/Por hacer</Typography>
+            fontWeight:'500'}}>Done/Hecho</Typography>
           <Typography component='h6'
          style={{fontSize: '0.9rem',
          color:'#FFE600',

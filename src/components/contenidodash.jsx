@@ -29,9 +29,9 @@ export default function FullWidthGrid() {
         <Toolbar>
           <Grid container alignItems="center" spacing={1}>
             <Grid item xs>
-              <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'20px'}}>
+              <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', margin:'20px 0 0 -20px'}}>
               Proyecto BIC</Typography>
-        <Typography style={{fontFamily: 'Arial, Helvetica, sans-serif'}}>Implementación App Banco Intercontinental</Typography>
+        <Typography style={{fontFamily: 'Arial, Helvetica, sans-serif', marginLeft:'-20px'}}>Implementación App Banco Intercontinental</Typography>
               
             </Grid>
             <Grid item>
