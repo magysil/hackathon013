@@ -4,7 +4,7 @@ import {
   Switch
 } from "react-router-dom";
 import Login from './View/Login';
-import Bienestar from './components/Bienestar';
+import Bienestar from './View/Bienestar';
 import Perfil from './components/Perfil';
 import Planificación from './View/Planificacion';
 import Register from './View/Auth';
