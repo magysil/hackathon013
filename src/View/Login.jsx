@@ -11,7 +11,10 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "firebase/auth";
-import { useFirebaseApp } from "reactfire";
+import { useFirebaseApp, useUser } from "reactfire";
+import { useHistory} from 'react-router-dom'
+import Perfil from '../components/Perfil'
+
 
 function Copyright() {
   return (
@@ -75,24 +78,40 @@ export default function Login() {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
+  const user = useUser();
 
   const firebase = useFirebaseApp();
 
   const submit = async (e) => {
     e.preventDefault();
-    await firebase.auth().signInWithEmailAndPassword(email, password);
-    alert("Acceso Exitoso");
-    document.getElementById("email").value = "";
-    document.getElementById("password").value = "";
+    await firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(() => {
+      alert("Acceso Exitoso");
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      history.push('/Perfil');
+    })
+    .catch((error) => {
+      alert('Correo o Contraseña Invalida');
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    }); 
+    
+
   };
   const submitGoogle = async (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     await firebase.auth().signInWithPopup(provider);
-    alert("Acceso Exitoso");
+     history.push('/Perfil');
+        
   };
 
   return (
+    <div>   
+    {
+    !user &&
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -173,5 +192,11 @@ export default function Login() {
         </div>
       </Grid>
     </Grid>
+    }
+    {
+      user && <Perfil />
+    }
+   </div>
+    
   );
 }
