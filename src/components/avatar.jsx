@@ -17,7 +17,7 @@ export default function ImageAvatars() {
   const user = useUser();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{ padding: '10px 0 10px 0', marginLeft: '60px' }}>
       <Avatar alt="Remy Sharp" src= {user.photoURL} />
 
     </div>
