@@ -127,7 +127,7 @@ export default function ClippedDrawer() {
     <Avatar></Avatar>
 
    <div className={classes.grow} />
-   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'10px'}}>
+   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant='subtitle1' style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 'bold', marginTop:'10px'}}>
    {user.displayName}</Typography></div>
    <div className={classes.sectionDesktop}>
 
