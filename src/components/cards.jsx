@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, makeStyles, withWidth } from "@material-ui/core/";
 import Typography from "@material-ui/core/Typography";
-import Toolbar from '@material-ui/core/Toolbar';
 
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -392,21 +391,3 @@ const Columnas = (props) => {
 };
 
 export default withWidth()(Columnas);
-
-
-{/* <Toolbar>
-<Grid container alignItems="center" spacing={1}>
-  <Grid item xs>
-  <IconButton style={{ color: "#747480" }}>
-                <CheckIcon />{" "}
-                <Typography style={{ fontSize: "0.9rem" }}>2/3</Typography>
-              </IconButton>
-
-  </Grid>
-  <Grid item>
-  <Fecha />
-  </Grid>
-  <Grid item>
-  </Grid>
-</Grid>
-</Toolbar> */}

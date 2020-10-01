@@ -133,15 +133,17 @@ export default function ClippedDrawer() {
     <Avatar></Avatar>
 
    <div className={classes.grow} />
-   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'10px'}}>
+   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant='subtitle1' style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight: 'bold', marginTop:'10px'}}>
    {user.displayName}</Typography></div>
    <div className={classes.sectionDesktop}>
-     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
-     {/*  <Avatar></Avatar>  */}
-           <Badge color="primary" variant="dot">
-       
-         <NotificationsIcon />
-       </Badge>
+
+     <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}} style={{ padding: '10px 0 10px 0', marginLeft: '600px' }}>
+     
+      <img src={On} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
+     </IconButton>
+     <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
+     <img src={GON} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
+
      </IconButton>
      <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
      <img src={Logout} alt='eylogo' width='35' onClick={logout} style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
