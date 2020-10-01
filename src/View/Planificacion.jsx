@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFirebaseApp, useUser } from "reactfire";
 import { useHistory} from 'react-router-dom';
+import Boards from '../components/Board';
 import Login from './Login';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -146,17 +147,6 @@ export default function ClippedDrawer() {
      <img src={Logout} alt='eylogo' width='35' onClick={logout} style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
      </IconButton>
    </div>
-   {/* <div className={classes.sectionMobile}>
-     <IconButton
-       aria-label="show more"
-       aria-controls={mobileMenuId}
-       aria-haspopup="true"
-       onClick={handleMobileMenuOpen}
-       style={{ color: '#000000' }}
-     >
-       <MoreIcon />
-     </IconButton>
-   </div> */}
     </Toolbar>
        </AppBar>
        <Drawer
@@ -175,32 +165,11 @@ export default function ClippedDrawer() {
 
          <Toolbar />
          <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {/* <Box component="span" m={1}>
-  <Button style={{ textTransform: "none", color: "#808080" }}>
-    Todos los proyectos
-  </Button>
-  <Button style={{ textTransform: "none" }}>
-    <Link
-      underline="always"
-      style={{
-        textDecoration: "none",
-        color: "#131313",
-        borderBottom: "2px solid #FFE600",
-      }}
-    >
-      Proyecto principal
-    </Link>
-  </Button>
-  <Button style={{ textTransform: "none", color: "#808080" }}>
-    Configurar proyectos
-  </Button>
-</Box> */}
-        {/* <Tab></Tab> */}
-        
+        <div className={classes.toolbar} />       
         <Contenido />
-        <Grid></Grid>
-        <Cards />
+        <Boards/>
+        {/* <Grid></Grid> */}
+        {/* <Cards /> */}
       </main>
        <MiniSidebar />
        

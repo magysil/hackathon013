@@ -1,0 +1,51 @@
+{
+  "lanes": [
+    {
+      "id": "PLANNED",
+      "title": "To Do/Por Hacer",
+      "label": "0/1",
+      "style": {"width": 280},
+      "cards": [
+        {
+          "id": "Milk",
+          "title": "iOS",
+          "label": "30 SEP",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
+          "description": "Pruebas unitarias de funcionalidad navbar y toggle (utilizar Mocha)"
+        }
+        
+      ]
+    },
+    {
+      "id": "WIP",
+      "title": "Doing/Haciendo",
+      "label": "0/1",
+      "style": {"width": 280},
+      "cards": [
+        {
+          "id": "Wip1",
+          "title": "iOS",
+          "label": "29 SEP",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
+          "description": "Completar encuesta de bienestar Completar aquí"
+        }
+      ]
+    },
+    {
+      "id": "DONE",
+      "title": "Done/Hecho",
+      "label": "0/1",
+      "style": {"width": 280},
+      "cards": [
+        {
+          "id": "Completed1",
+          "title": "iOS",
+          "label": "29 SEP",
+          "cardStyle": { "width": 270, "maxWidth": 270, "margin": "auto", "marginBottom": 5 },
+          "description": "Git Pull a repositorio de Pablo Hernandez (owner)"
+        }
+      ]
+    }
+    
+  ]
+}
