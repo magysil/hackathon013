@@ -5,6 +5,7 @@ import App from './App.js';
 import {FirebaseAppProvider} from 'reactfire'; 
 import {firebase} from './firebaseConfig.js';
 
+
 ReactDOM.render((
 <FirebaseAppProvider FirebaseConfig={firebase}>
   <React.StrictMode>
