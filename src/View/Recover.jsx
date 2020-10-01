@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   image: {
-    backgroundImage: "url(https://i.ibb.co/bv5wTTr/imagenEY.png)",
+    backgroundImage: "url(https://i.ibb.co/HKgSR3b/imagenEY.png)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -56,6 +56,15 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    color: "#000",
+    "&:hover": {
+      color: "#000",
+      backgroundColor: "#FFE600",
+    },
+    backgroundColor: "#FFE600",
+  },
+  link: {
+    color: "#000",
   },
 }));
 
@@ -111,7 +120,7 @@ export default function Login() {
            
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="/" variant="body2" className={classes.link}>
                 Regresar
                 </Link>
               </Grid>
