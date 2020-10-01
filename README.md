@@ -34,7 +34,7 @@ Como solución construimos una plataforma llamada **FocusTime**, la cual es una 
 ![p1](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s1-01.jpg)
 ![p2](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s2-01.jpg)
 
-##### Pantallas correspondientes a la vista del Líder del equipo
+##### Pantallas correspondientes al Líder del equipo
 ![p3](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s3-01.jpg)
 ![p4](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s4-01.jpg)
 
