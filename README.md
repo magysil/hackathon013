@@ -1,68 +1,43 @@
-THIS This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![banner](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/banner-02-01.png)
 
-## Available Scripts
+**FocusTime** es la propuesta al Desafío #1 del **Equipo Las Bots** 
+en la Hackathon de la Generación SCL013 de Laboratoria.
 
-In the project directory, you can run:
 
-### `npm start`
+------
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[EY](https://www.ey.com/es_cl) junto a [Temenos](https://www.temenos.com/) vinieron a nosotras con la siguiente problemática:
 
-### `npm test`
+> En tiempos de pandemia las empresas han tenido que migrar a una forma
+> de trabajo 100% remota y uno de los grandes dolores que se han
+> generado en los equipos de trabajo es no visualizar las tareas que
+> cada miembro realiza en el día a día. 
+> 
+> Esto ha sido especialmente complejo para los líderes, a quienes se les
+> ha dificultado ver las acciones y los resultados que consigue su
+> equipo. 
+> 
+> Sería genial contar con una **herramienta interactiva e innovadora**
+> que cuente con **técnicas tipo video juego / gamificación** para
+> incentivar a los equipos a usarla.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Como solución construimos una plataforma llamada **FocusTime**, la cual es una herramienta para que colaboradores puedan **planificarse, interactuar entre sí y recibir puntos y recompensas por tareas realizadas**, y el líder pueda **obtener métricas de productividad y bienestar del equipo y asignarles las actividades** que les correspondan.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Prototipo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Prototipo en Figma](https://www.figma.com/proto/xZRXt3Pyagd3kN9TfB7P07/Hackaton?node-id=113:579&scaling=min-zoom)
 
-### `npm run eject`
+##### Pantallas correspondientes al Colaborador del equipo
+![p1](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s1-01.jpg)
+![p2](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s2-01.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### Pantallas correspondientes al Líder del equipo
+![p3](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s3-01.jpg)
+![p4](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/s4-01.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
