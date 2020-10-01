@@ -17,6 +17,10 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Avatar from "../components/avatar";
 import MenuLateral from '../components/menu'
 import Contenido from '../components/contenidodashBienestar'
+import Typography from '@material-ui/core/Typography';
+import On from '../imagenes/On.svg'
+import GON from '../imagenes/GON.svg'
+import Logout from '../imagenes/Logout.svg'
 
 
 const drawerWidth = 50;
@@ -102,19 +106,20 @@ export default function ClippedDrawer() {
         <CssBaseline />
         <AppBar position="fixed" className={classes.appBar} style={{ background: '#FFFFFF' }}>
           <Toolbar>
-            <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '20px' }}/>
+            <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
+            <Avatar></Avatar> 
             <div className={classes.grow} />
+            <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'10px'}}>
+               {user.displayName}</Typography></div>
               <div className={classes.sectionDesktop}>
-                <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
-                  <Avatar></Avatar> 
-                  <Badge color="primary" variant="dot">
-                    <NotificationsIcon />
-                  </Badge>
+                <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}} style={{ padding: '10px 0 10px 0', marginLeft: '770px' }}>
+                <img src={On} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
                 </IconButton>
                 <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
-                  <SettingsIcon />
+                <img src={GON} alt='eylogo' width='35' style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
                 </IconButton>
-                <button onClick={logout}> Cerrar Sesión</button>
+                
+                <button onClick={logout} > Cerrar Sesión</button>
               </div>
           </Toolbar>
         </AppBar>

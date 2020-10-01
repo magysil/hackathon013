@@ -1,5 +1,5 @@
 import React from 'react';
-import { useUser } from "reactfire";
+import { useFirebaseApp, useUser } from "reactfire";
 import { useHistory} from 'react-router-dom';
 import Login from './Login';
 import { fade, makeStyles } from '@material-ui/core/styles';
@@ -12,7 +12,9 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import SettingsIcon from '@material-ui/icons/SettingsOutlined'
 import EYlogo from '../imagenes/eylogo.svg'
  //____________________//
-
+ import On from '../imagenes/On.svg'
+ import GON from '../imagenes/GON.svg'
+ import Logout from '../imagenes/Logout.svg'
  import MiniSidebar from '../components/minisidebar'
 
  import Cards from '../components/cards'
@@ -110,7 +112,12 @@ export default function ClippedDrawer() {
    const classes = useStyles();
    const user = useUser();
    const history = useHistory();
- 
+   const firebase = useFirebaseApp();
+
+   const logout = async ()=>{
+     await firebase.auth().signOut();
+     history.push('/');
+   }
   return (
     
     <div>
@@ -122,18 +129,21 @@ export default function ClippedDrawer() {
        <Toolbar>
  
     <img src={EYlogo} alt='eylogo' width='50' style={{ padding: '10px 0 10px 0', marginLeft: '20px' }}/>
- 
+    <Avatar></Avatar>
+
    <div className={classes.grow} />
+   <div  width='50' style={{ color: '#2E2E38'}} > <Typography color="inherit" variant="h4" component="h1" style={{fontFamily: 'Arial, Helvetica, sans-serif', fontWeight:'bold', marginTop:'10px'}}>
+   {user.displayName}</Typography></div>
    <div className={classes.sectionDesktop}>
      <IconButton aria-label="show 4 new mails" style={{ color: '#000000'}}>
-      <Avatar></Avatar> 
+     {/*  <Avatar></Avatar>  */}
            <Badge color="primary" variant="dot">
        
          <NotificationsIcon />
        </Badge>
      </IconButton>
      <IconButton aria-label="show 17 new notifications" style={{ color: '#000000'}}>
-         <SettingsIcon />
+     <img src={Logout} alt='eylogo' width='35' onClick={logout} style={{ padding: '10px 0 10px 0', marginLeft: '10px' }}/>
      </IconButton>
    </div>
    {/* <div className={classes.sectionMobile}>
