@@ -4,7 +4,7 @@ import { createTranslate } from 'react-trello'
 
 const TEXTS = {
   "Add another lane": "Agregar otro",
-  "Click to add card": "Haga clic para agregar una tarjeta",
+  "Click to add card": "Agregar tarea",
   "Delete lane": "Eliminar carril",
   "Lane actions": "Acciones de carril",
   "button": {
@@ -14,10 +14,11 @@ const TEXTS = {
   },
   "placeholder": {
     "title": "título",
-    "description": "descripción",
-    "label": "etiqueta"
+    "description": "descripción"
+    // "label": "etiqueta"
   }
 }
+
 const data = require('../Data/data.json')
 
 const handleDragStart = (cardId, laneId) => {
@@ -76,7 +77,7 @@ class Boards extends Component {
             handleDragStart={handleDragStart}
             handleDragEnd={handleDragEnd}
             t={createTranslate(TEXTS)}
-            style={{backgroundColor: 'white'}}
+            style={{backgroundColor: '#fafafa'}}
             
           />
         </div>
