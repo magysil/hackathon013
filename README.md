@@ -1,6 +1,7 @@
 ![banner](https://raw.githubusercontent.com/ivvnv/hackathon013/develop/src/images/banner-02-01.png)
 
-**FocusTime** es la propuesta al Desafío #1 del **Equipo Las Bots** en la Hackathon de la Generación SCL013 de Laboratoria.
+**FocusTime** es la propuesta al Desafío #1 del **Equipo Las Bots** 
+en la Hackathon de la Generación SCL013 de Laboratoria.
 
 
 ------
@@ -8,12 +9,18 @@
 
 [EY](https://www.ey.com/es_cl) junto a [Temenos](https://www.temenos.com/) vinieron a nosotras con la siguiente problemática:
 
-
-> En tiempos de pandemia las empresas han tenido que migrar a una forma de trabajo 100% remota y uno de los grandes dolores que se han generado en los equipos de trabajo es no visualizar las tareas que cada miembro realiza en el día a día. 
-
-> Esto ha sido especialmente complejo para los líderes, a quienes se les ha dificultado ver las acciones y los resultados que consigue su equipo. 
-
-> Sería genial contar con una **herramienta interactiva e innovadora** que cuente con **técnicas tipo video juego / gamificación** para incentivar a los equipos a usarla.
+> En tiempos de pandemia las empresas han tenido que migrar a una forma
+> de trabajo 100% remota y uno de los grandes dolores que se han
+> generado en los equipos de trabajo es no visualizar las tareas que
+> cada miembro realiza en el día a día. 
+> 
+> Esto ha sido especialmente complejo para los líderes, a quienes se les
+> ha dificultado ver las acciones y los resultados que consigue su
+> equipo. 
+> 
+> Sería genial contar con una **herramienta interactiva e innovadora**
+> que cuente con **técnicas tipo video juego / gamificación** para
+> incentivar a los equipos a usarla.
 
 
 Como solución construimos una plataforma llamada **FocusTime**, la cual es una herramienta para que colaboradores puedan **planificarse, interactuar entre sí y recibir puntos y recompensas por tareas realizadas**, y el líder pueda **obtener métricas de productividad y bienestar del equipo y asignar actividades** a su equipo.
